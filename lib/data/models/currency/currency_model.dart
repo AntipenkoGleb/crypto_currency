@@ -1,11 +1,11 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'currency.freezed.dart';
-part 'currency.g.dart';
+part 'currency_model.freezed.dart';
+part 'currency_model.g.dart';
 
 @freezed
-class Currency with _$Currency {
-  factory Currency({
+class CurrencyModel with _$CurrencyModel {
+  const factory CurrencyModel({
     String? id,
     String? rank,
     String? symbol,
@@ -18,8 +18,8 @@ class Currency with _$Currency {
     String? changePercent24Hr,
     String? vwap24Hr,
     String? explorer,
-  }) = _Currency;
+  }) = Model;
 
-  factory Currency.fromJson(Map<String, dynamic> json) =>
-      _$CurrencyFromJson(json);
+  factory CurrencyModel.fromJson(Map<String, dynamic> json) =>
+      _$CurrencyModelFromJson(json);
 }

@@ -1,10 +1,11 @@
-import 'package:crypto_currency/domain/entities/currency/currency.dart';
 import 'package:crypto_currency/domain/repositories/currency_repository.dart';
 
-class GetCurrenciesUseCase {
-  final CurrencyRepository repository;
+import '../entities/currency.dart';
 
+class GetCurrenciesUseCase {
   GetCurrenciesUseCase({required this.repository});
+
+  final CurrencyRepository repository;
 
   Future<List<Currency>> call() {
     return repository.getCurrencies();

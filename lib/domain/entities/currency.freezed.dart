@@ -14,26 +14,22 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-Currency _$CurrencyFromJson(Map<String, dynamic> json) {
-  return _Currency.fromJson(json);
-}
-
 /// @nodoc
 mixin _$Currency {
-  String? get id => throw _privateConstructorUsedError;
-  String? get rank => throw _privateConstructorUsedError;
-  String? get symbol => throw _privateConstructorUsedError;
-  String? get name => throw _privateConstructorUsedError;
-  String? get supply => throw _privateConstructorUsedError;
-  String? get maxSupply => throw _privateConstructorUsedError;
-  String? get marketCapUsd => throw _privateConstructorUsedError;
-  String? get volumeUsd24Hr => throw _privateConstructorUsedError;
-  String? get priceUsd => throw _privateConstructorUsedError;
-  String? get changePercent24Hr => throw _privateConstructorUsedError;
-  String? get vwap24Hr => throw _privateConstructorUsedError;
-  String? get explorer => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
+  int get rank => throw _privateConstructorUsedError;
+  String get symbol => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  double? get supply => throw _privateConstructorUsedError;
+  double? get maxSupply => throw _privateConstructorUsedError;
+  double? get marketCapUsd => throw _privateConstructorUsedError;
+  double? get volumeUsd24Hr => throw _privateConstructorUsedError;
+  double? get priceUsd => throw _privateConstructorUsedError;
+  double? get changePercent24Hr => throw _privateConstructorUsedError;
+  double? get vwap24Hr => throw _privateConstructorUsedError;
+  String get explorer => throw _privateConstructorUsedError;
+  int get timestamp => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CurrencyCopyWith<Currency> get copyWith =>
       throw _privateConstructorUsedError;
@@ -45,18 +41,19 @@ abstract class $CurrencyCopyWith<$Res> {
       _$CurrencyCopyWithImpl<$Res, Currency>;
   @useResult
   $Res call(
-      {String? id,
-      String? rank,
-      String? symbol,
-      String? name,
-      String? supply,
-      String? maxSupply,
-      String? marketCapUsd,
-      String? volumeUsd24Hr,
-      String? priceUsd,
-      String? changePercent24Hr,
-      String? vwap24Hr,
-      String? explorer});
+      {String id,
+      int rank,
+      String symbol,
+      String name,
+      double? supply,
+      double? maxSupply,
+      double? marketCapUsd,
+      double? volumeUsd24Hr,
+      double? priceUsd,
+      double? changePercent24Hr,
+      double? vwap24Hr,
+      String explorer,
+      int timestamp});
 }
 
 /// @nodoc
@@ -72,10 +69,10 @@ class _$CurrencyCopyWithImpl<$Res, $Val extends Currency>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? rank = freezed,
-    Object? symbol = freezed,
-    Object? name = freezed,
+    Object? id = null,
+    Object? rank = null,
+    Object? symbol = null,
+    Object? name = null,
     Object? supply = freezed,
     Object? maxSupply = freezed,
     Object? marketCapUsd = freezed,
@@ -83,57 +80,62 @@ class _$CurrencyCopyWithImpl<$Res, $Val extends Currency>
     Object? priceUsd = freezed,
     Object? changePercent24Hr = freezed,
     Object? vwap24Hr = freezed,
-    Object? explorer = freezed,
+    Object? explorer = null,
+    Object? timestamp = null,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      rank: freezed == rank
+              as String,
+      rank: null == rank
           ? _value.rank
           : rank // ignore: cast_nullable_to_non_nullable
-              as String?,
-      symbol: freezed == symbol
+              as int,
+      symbol: null == symbol
           ? _value.symbol
           : symbol // ignore: cast_nullable_to_non_nullable
-              as String?,
-      name: freezed == name
+              as String,
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       supply: freezed == supply
           ? _value.supply
           : supply // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as double?,
       maxSupply: freezed == maxSupply
           ? _value.maxSupply
           : maxSupply // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as double?,
       marketCapUsd: freezed == marketCapUsd
           ? _value.marketCapUsd
           : marketCapUsd // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as double?,
       volumeUsd24Hr: freezed == volumeUsd24Hr
           ? _value.volumeUsd24Hr
           : volumeUsd24Hr // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as double?,
       priceUsd: freezed == priceUsd
           ? _value.priceUsd
           : priceUsd // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as double?,
       changePercent24Hr: freezed == changePercent24Hr
           ? _value.changePercent24Hr
           : changePercent24Hr // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as double?,
       vwap24Hr: freezed == vwap24Hr
           ? _value.vwap24Hr
           : vwap24Hr // ignore: cast_nullable_to_non_nullable
-              as String?,
-      explorer: freezed == explorer
+              as double?,
+      explorer: null == explorer
           ? _value.explorer
           : explorer // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
+      timestamp: null == timestamp
+          ? _value.timestamp
+          : timestamp // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 }
@@ -146,18 +148,19 @@ abstract class _$$_CurrencyCopyWith<$Res> implements $CurrencyCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String? id,
-      String? rank,
-      String? symbol,
-      String? name,
-      String? supply,
-      String? maxSupply,
-      String? marketCapUsd,
-      String? volumeUsd24Hr,
-      String? priceUsd,
-      String? changePercent24Hr,
-      String? vwap24Hr,
-      String? explorer});
+      {String id,
+      int rank,
+      String symbol,
+      String name,
+      double? supply,
+      double? maxSupply,
+      double? marketCapUsd,
+      double? volumeUsd24Hr,
+      double? priceUsd,
+      double? changePercent24Hr,
+      double? vwap24Hr,
+      String explorer,
+      int timestamp});
 }
 
 /// @nodoc
@@ -171,10 +174,10 @@ class __$$_CurrencyCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? rank = freezed,
-    Object? symbol = freezed,
-    Object? name = freezed,
+    Object? id = null,
+    Object? rank = null,
+    Object? symbol = null,
+    Object? name = null,
     Object? supply = freezed,
     Object? maxSupply = freezed,
     Object? marketCapUsd = freezed,
@@ -182,69 +185,74 @@ class __$$_CurrencyCopyWithImpl<$Res>
     Object? priceUsd = freezed,
     Object? changePercent24Hr = freezed,
     Object? vwap24Hr = freezed,
-    Object? explorer = freezed,
+    Object? explorer = null,
+    Object? timestamp = null,
   }) {
     return _then(_$_Currency(
-      id: freezed == id
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      rank: freezed == rank
+              as String,
+      rank: null == rank
           ? _value.rank
           : rank // ignore: cast_nullable_to_non_nullable
-              as String?,
-      symbol: freezed == symbol
+              as int,
+      symbol: null == symbol
           ? _value.symbol
           : symbol // ignore: cast_nullable_to_non_nullable
-              as String?,
-      name: freezed == name
+              as String,
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       supply: freezed == supply
           ? _value.supply
           : supply // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as double?,
       maxSupply: freezed == maxSupply
           ? _value.maxSupply
           : maxSupply // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as double?,
       marketCapUsd: freezed == marketCapUsd
           ? _value.marketCapUsd
           : marketCapUsd // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as double?,
       volumeUsd24Hr: freezed == volumeUsd24Hr
           ? _value.volumeUsd24Hr
           : volumeUsd24Hr // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as double?,
       priceUsd: freezed == priceUsd
           ? _value.priceUsd
           : priceUsd // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as double?,
       changePercent24Hr: freezed == changePercent24Hr
           ? _value.changePercent24Hr
           : changePercent24Hr // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as double?,
       vwap24Hr: freezed == vwap24Hr
           ? _value.vwap24Hr
           : vwap24Hr // ignore: cast_nullable_to_non_nullable
-              as String?,
-      explorer: freezed == explorer
+              as double?,
+      explorer: null == explorer
           ? _value.explorer
           : explorer // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
+      timestamp: null == timestamp
+          ? _value.timestamp
+          : timestamp // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
 
 /// @nodoc
-@JsonSerializable()
+
 class _$_Currency implements _Currency {
-  _$_Currency(
-      {this.id,
-      this.rank,
-      this.symbol,
-      this.name,
+  const _$_Currency(
+      {required this.id,
+      required this.rank,
+      required this.symbol,
+      required this.name,
       this.supply,
       this.maxSupply,
       this.marketCapUsd,
@@ -252,39 +260,39 @@ class _$_Currency implements _Currency {
       this.priceUsd,
       this.changePercent24Hr,
       this.vwap24Hr,
-      this.explorer});
-
-  factory _$_Currency.fromJson(Map<String, dynamic> json) =>
-      _$$_CurrencyFromJson(json);
+      required this.explorer,
+      required this.timestamp});
 
   @override
-  final String? id;
+  final String id;
   @override
-  final String? rank;
+  final int rank;
   @override
-  final String? symbol;
+  final String symbol;
   @override
-  final String? name;
+  final String name;
   @override
-  final String? supply;
+  final double? supply;
   @override
-  final String? maxSupply;
+  final double? maxSupply;
   @override
-  final String? marketCapUsd;
+  final double? marketCapUsd;
   @override
-  final String? volumeUsd24Hr;
+  final double? volumeUsd24Hr;
   @override
-  final String? priceUsd;
+  final double? priceUsd;
   @override
-  final String? changePercent24Hr;
+  final double? changePercent24Hr;
   @override
-  final String? vwap24Hr;
+  final double? vwap24Hr;
   @override
-  final String? explorer;
+  final String explorer;
+  @override
+  final int timestamp;
 
   @override
   String toString() {
-    return 'Currency(id: $id, rank: $rank, symbol: $symbol, name: $name, supply: $supply, maxSupply: $maxSupply, marketCapUsd: $marketCapUsd, volumeUsd24Hr: $volumeUsd24Hr, priceUsd: $priceUsd, changePercent24Hr: $changePercent24Hr, vwap24Hr: $vwap24Hr, explorer: $explorer)';
+    return 'Currency(id: $id, rank: $rank, symbol: $symbol, name: $name, supply: $supply, maxSupply: $maxSupply, marketCapUsd: $marketCapUsd, volumeUsd24Hr: $volumeUsd24Hr, priceUsd: $priceUsd, changePercent24Hr: $changePercent24Hr, vwap24Hr: $vwap24Hr, explorer: $explorer, timestamp: $timestamp)';
   }
 
   @override
@@ -310,10 +318,11 @@ class _$_Currency implements _Currency {
             (identical(other.vwap24Hr, vwap24Hr) ||
                 other.vwap24Hr == vwap24Hr) &&
             (identical(other.explorer, explorer) ||
-                other.explorer == explorer));
+                other.explorer == explorer) &&
+            (identical(other.timestamp, timestamp) ||
+                other.timestamp == timestamp));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -328,63 +337,58 @@ class _$_Currency implements _Currency {
       priceUsd,
       changePercent24Hr,
       vwap24Hr,
-      explorer);
+      explorer,
+      timestamp);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$_CurrencyCopyWith<_$_Currency> get copyWith =>
       __$$_CurrencyCopyWithImpl<_$_Currency>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_CurrencyToJson(
-      this,
-    );
-  }
 }
 
 abstract class _Currency implements Currency {
-  factory _Currency(
-      {final String? id,
-      final String? rank,
-      final String? symbol,
-      final String? name,
-      final String? supply,
-      final String? maxSupply,
-      final String? marketCapUsd,
-      final String? volumeUsd24Hr,
-      final String? priceUsd,
-      final String? changePercent24Hr,
-      final String? vwap24Hr,
-      final String? explorer}) = _$_Currency;
+  const factory _Currency(
+      {required final String id,
+      required final int rank,
+      required final String symbol,
+      required final String name,
+      final double? supply,
+      final double? maxSupply,
+      final double? marketCapUsd,
+      final double? volumeUsd24Hr,
+      final double? priceUsd,
+      final double? changePercent24Hr,
+      final double? vwap24Hr,
+      required final String explorer,
+      required final int timestamp}) = _$_Currency;
 
-  factory _Currency.fromJson(Map<String, dynamic> json) = _$_Currency.fromJson;
-
   @override
-  String? get id;
+  String get id;
   @override
-  String? get rank;
+  int get rank;
   @override
-  String? get symbol;
+  String get symbol;
   @override
-  String? get name;
+  String get name;
   @override
-  String? get supply;
+  double? get supply;
   @override
-  String? get maxSupply;
+  double? get maxSupply;
   @override
-  String? get marketCapUsd;
+  double? get marketCapUsd;
   @override
-  String? get volumeUsd24Hr;
+  double? get volumeUsd24Hr;
   @override
-  String? get priceUsd;
+  double? get priceUsd;
   @override
-  String? get changePercent24Hr;
+  double? get changePercent24Hr;
   @override
-  String? get vwap24Hr;
+  double? get vwap24Hr;
   @override
-  String? get explorer;
+  String get explorer;
+  @override
+  int get timestamp;
   @override
   @JsonKey(ignore: true)
   _$$_CurrencyCopyWith<_$_Currency> get copyWith =>

@@ -1,12 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'currency.dart';
+part of 'currency_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Currency _$$_CurrencyFromJson(Map<String, dynamic> json) => _$_Currency(
+_$Model _$$ModelFromJson(Map<String, dynamic> json) => _$Model(
       id: json['id'] as String?,
       rank: json['rank'] as String?,
       symbol: json['symbol'] as String?,
@@ -21,8 +21,7 @@ _$_Currency _$$_CurrencyFromJson(Map<String, dynamic> json) => _$_Currency(
       explorer: json['explorer'] as String?,
     );
 
-Map<String, dynamic> _$$_CurrencyToJson(_$_Currency instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$ModelToJson(_$Model instance) => <String, dynamic>{
       'id': instance.id,
       'rank': instance.rank,
       'symbol': instance.symbol,

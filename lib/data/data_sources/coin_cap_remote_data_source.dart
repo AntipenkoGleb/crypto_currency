@@ -1,10 +1,8 @@
-import 'package:crypto_currency/domain/entities/currency/currency.dart';
+import 'package:crypto_currency/data/models/currencies/currencies_response_model.dart';
 import 'package:dio/dio.dart';
 
-import '../../domain/entities/currencies/currencies.dart';
-
 abstract class CoinCapRemoteDataSource {
-  Future<List<Currency>> getCurrencies();
+  Future<CurrenciesResponseModel> getCurrencies();
 }
 
 class CoinCapRemoteDataSourceImpl extends CoinCapRemoteDataSource {
@@ -13,13 +11,15 @@ class CoinCapRemoteDataSourceImpl extends CoinCapRemoteDataSource {
       headers: {
         'Content-Type': 'application/json',
       },
+      sendTimeout: const Duration(seconds: 3),
     ),
   );
 
   @override
-  Future<List<Currency>> getCurrencies() async {
+  Future<CurrenciesResponseModel> getCurrencies() async {
     final response = await dio.get('https://api.coincap.io/v2/assets');
-    final currencies = Currencies.fromJson(response.data);
-    return currencies.data!;
+
+    final currencies = CurrenciesResponseModel.fromJson(response.data);
+    return currencies;
   }
 }
