@@ -1,5 +1,6 @@
-import '../models/currencies/currencies_response_model.dart';
 import 'package:dio/dio.dart';
+
+import '../models/currencies/currencies_response_model.dart';
 
 abstract class CoinCapRemoteDataSource {
   Future<CurrenciesResponseModel> getCurrencies();

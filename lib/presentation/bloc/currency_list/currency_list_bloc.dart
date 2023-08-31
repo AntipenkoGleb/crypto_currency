@@ -6,9 +6,9 @@ import '../../../app/injection.dart';
 import '../../../domain/entities/currency.dart';
 import '../../../domain/use_cases/get_currencies_use_case.dart';
 
+part 'currency_list_bloc.freezed.dart';
 part 'currency_list_event.dart';
 part 'currency_list_state.dart';
-part 'currency_list_bloc.freezed.dart';
 
 class CurrencyListBloc extends Bloc<CurrencyListEvent, CurrencyListState> {
   CurrencyListBloc() : super(const CurrencyListState.initial()) {

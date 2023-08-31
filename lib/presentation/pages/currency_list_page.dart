@@ -9,6 +9,7 @@ import '../bloc/currency_list/currency_list_bloc.dart';
 @RoutePage()
 class CurrencyListPage extends StatelessWidget {
   const CurrencyListPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
