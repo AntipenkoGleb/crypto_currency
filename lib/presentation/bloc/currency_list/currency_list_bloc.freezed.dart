@@ -21,32 +21,27 @@ mixin _$CurrencyListEvent {
     required TResult Function() started,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(CurrencyListStartedEvent value) started,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(CurrencyListStartedEvent value)? started,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(CurrencyListStartedEvent value)? started,
@@ -68,10 +63,9 @@ class _$CurrencyListEventCopyWithImpl<$Res, $Val extends CurrencyListEvent>
   _$CurrencyListEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  // ignore: unused_field
   final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
@@ -98,11 +92,25 @@ class _$CurrencyListStartedEvent
   const _$CurrencyListStartedEvent();
 
   @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'CurrencyListEvent.started()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'CurrencyListEvent.started'));
+  }
+
+  @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CurrencyListStartedEvent);
   }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
@@ -159,20 +167,6 @@ class _$CurrencyListStartedEvent
     }
     return orElse();
   }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'CurrencyListEvent.started'));
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'CurrencyListEvent.started()';
-  }
 }
 
 abstract class CurrencyListStartedEvent implements CurrencyListEvent {
@@ -189,7 +183,6 @@ mixin _$CurrencyListState {
     required TResult Function() loading,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? error,
@@ -198,7 +191,6 @@ mixin _$CurrencyListState {
     TResult? Function()? loading,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? error,
@@ -208,7 +200,6 @@ mixin _$CurrencyListState {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(CurrencyListError value) error,
@@ -217,7 +208,6 @@ mixin _$CurrencyListState {
     required TResult Function(CurrencyListLoading value) loading,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(CurrencyListError value)? error,
@@ -226,7 +216,6 @@ mixin _$CurrencyListState {
     TResult? Function(CurrencyListLoading value)? loading,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(CurrencyListError value)? error,
@@ -251,10 +240,9 @@ class _$CurrencyListStateCopyWithImpl<$Res, $Val extends CurrencyListState>
   _$CurrencyListStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  // ignore: unused_field
   final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
@@ -281,10 +269,24 @@ class _$CurrencyListError
   const _$CurrencyListError();
 
   @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'CurrencyListState.error()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'CurrencyListState.error'));
+  }
+
+  @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType && other is _$CurrencyListError);
   }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
@@ -359,20 +361,6 @@ class _$CurrencyListError
     }
     return orElse();
   }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'CurrencyListState.error'));
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'CurrencyListState.error()';
-  }
 }
 
 abstract class CurrencyListError implements CurrencyListState {
@@ -403,10 +391,24 @@ class _$CurrencyListInitial
   const _$CurrencyListInitial();
 
   @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'CurrencyListState.initial()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'CurrencyListState.initial'));
+  }
+
+  @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType && other is _$CurrencyListInitial);
   }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
@@ -481,20 +483,6 @@ class _$CurrencyListInitial
     }
     return orElse();
   }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'CurrencyListState.initial'));
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'CurrencyListState.initial()';
-  }
 }
 
 abstract class CurrencyListInitial implements CurrencyListState {
@@ -506,7 +494,6 @@ abstract class _$$CurrencyListLoadedCopyWith<$Res> {
   factory _$$CurrencyListLoadedCopyWith(_$CurrencyListLoaded value,
           $Res Function(_$CurrencyListLoaded) then) =
       __$$CurrencyListLoadedCopyWithImpl<$Res>;
-
   @useResult
   $Res call({List<Currency> currencies});
 }
@@ -542,6 +529,25 @@ class _$CurrencyListLoaded
       : _currencies = currencies;
 
   final List<Currency> _currencies;
+  @override
+  List<Currency> get currencies {
+    if (_currencies is EqualUnmodifiableListView) return _currencies;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_currencies);
+  }
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'CurrencyListState.loaded(currencies: $currencies)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'CurrencyListState.loaded'))
+      ..add(DiagnosticsProperty('currencies', currencies));
+  }
 
   @override
   bool operator ==(dynamic other) {
@@ -551,6 +557,10 @@ class _$CurrencyListLoaded
             const DeepCollectionEquality()
                 .equals(other._currencies, _currencies));
   }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_currencies));
 
   @JsonKey(ignore: true)
   @override
@@ -632,30 +642,6 @@ class _$CurrencyListLoaded
     }
     return orElse();
   }
-
-  @override
-  List<Currency> get currencies {
-    if (_currencies is EqualUnmodifiableListView) return _currencies;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_currencies);
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'CurrencyListState.loaded'))
-      ..add(DiagnosticsProperty('currencies', currencies));
-  }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_currencies));
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'CurrencyListState.loaded(currencies: $currencies)';
-  }
 }
 
 abstract class CurrencyListLoaded implements CurrencyListState {
@@ -663,7 +649,6 @@ abstract class CurrencyListLoaded implements CurrencyListState {
       _$CurrencyListLoaded;
 
   List<Currency> get currencies;
-
   @JsonKey(ignore: true)
   _$$CurrencyListLoadedCopyWith<_$CurrencyListLoaded> get copyWith =>
       throw _privateConstructorUsedError;
@@ -693,10 +678,24 @@ class _$CurrencyListLoading
   const _$CurrencyListLoading();
 
   @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'CurrencyListState.loading()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'CurrencyListState.loading'));
+  }
+
+  @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType && other is _$CurrencyListLoading);
   }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
@@ -770,20 +769,6 @@ class _$CurrencyListLoading
       return loading(this);
     }
     return orElse();
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'CurrencyListState.loading'));
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'CurrencyListState.loading()';
   }
 }
 
