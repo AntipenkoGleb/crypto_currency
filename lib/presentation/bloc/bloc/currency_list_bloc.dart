@@ -1,10 +1,9 @@
 import 'package:bloc/bloc.dart';
-
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import '../../../app/injection.dart';
 import '../../../domain/entities/currency.dart';
-import '../../../data/repositories/currency_repository_impl.dart';
 import '../../../domain/use_cases/get_currencies_use_case.dart';
 
 part 'currency_list_event.dart';
@@ -16,7 +15,7 @@ class CurrencyListBloc extends Bloc<CurrencyListEvent, CurrencyListState> {
     on<CurrencyListStartedEvent>(getCurrencies);
   }
 
-  final useCase = GetCurrenciesUseCase(repository: CurrencyRepositoryImpl());
+  final useCase = sl<GetCurrenciesUseCase>();
 
   Future<void> getCurrencies(event, emit) async {
     emit(const CurrencyListState.loading());

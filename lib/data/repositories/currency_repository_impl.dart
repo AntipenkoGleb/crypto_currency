@@ -1,10 +1,12 @@
+import '../../app/injection.dart';
+
 import '../../domain/entities/currency.dart';
 import '../data_sources/coin_cap_remote_data_source.dart';
 import '../../domain/repositories/currency_repository.dart';
 import '../models/currency/currency_model.dart';
 
 class CurrencyRepositoryImpl extends CurrencyRepository {
-  final CoinCapRemoteDataSource dataSource = CoinCapRemoteDataSourceImpl();
+  final CoinCapRemoteDataSource dataSource = sl<CoinCapRemoteDataSource>();
 
   @override
   Future<List<Currency>> getCurrencies() async {

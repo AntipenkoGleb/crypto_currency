@@ -21,27 +21,32 @@ mixin _$CurrencyListEvent {
     required TResult Function() started,
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(CurrencyListStartedEvent value) started,
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(CurrencyListStartedEvent value)? started,
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(CurrencyListStartedEvent value)? started,
@@ -63,9 +68,10 @@ class _$CurrencyListEventCopyWithImpl<$Res, $Val extends CurrencyListEvent>
   _$CurrencyListEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
   final $Res Function($Val) _then;
+
+  // ignore: unused_field
+  final $Val _value;
 }
 
 /// @nodoc
@@ -92,25 +98,11 @@ class _$CurrencyListStartedEvent
   const _$CurrencyListStartedEvent();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'CurrencyListEvent.started()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'CurrencyListEvent.started'));
-  }
-
-  @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CurrencyListStartedEvent);
   }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
@@ -167,6 +159,20 @@ class _$CurrencyListStartedEvent
     }
     return orElse();
   }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'CurrencyListEvent.started'));
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'CurrencyListEvent.started()';
+  }
 }
 
 abstract class CurrencyListStartedEvent implements CurrencyListEvent {
@@ -177,51 +183,56 @@ abstract class CurrencyListStartedEvent implements CurrencyListEvent {
 mixin _$CurrencyListState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() error,
     required TResult Function() initial,
     required TResult Function(List<Currency> currencies) loaded,
     required TResult Function() loading,
-    required TResult Function() error,
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
     TResult? Function()? initial,
     TResult? Function(List<Currency> currencies)? loaded,
     TResult? Function()? loading,
-    TResult? Function()? error,
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
     TResult Function()? initial,
     TResult Function(List<Currency> currencies)? loaded,
     TResult Function()? loading,
-    TResult Function()? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(CurrencyListError value) error,
     required TResult Function(CurrencyListInitial value) initial,
     required TResult Function(CurrencyListLoaded value) loaded,
     required TResult Function(CurrencyListLoading value) loading,
-    required TResult Function(CurrencyListError value) error,
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(CurrencyListError value)? error,
     TResult? Function(CurrencyListInitial value)? initial,
     TResult? Function(CurrencyListLoaded value)? loaded,
     TResult? Function(CurrencyListLoading value)? loading,
-    TResult? Function(CurrencyListError value)? error,
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(CurrencyListError value)? error,
     TResult Function(CurrencyListInitial value)? initial,
     TResult Function(CurrencyListLoaded value)? loaded,
     TResult Function(CurrencyListLoading value)? loading,
-    TResult Function(CurrencyListError value)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -240,9 +251,132 @@ class _$CurrencyListStateCopyWithImpl<$Res, $Val extends CurrencyListState>
   _$CurrencyListStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
   final $Res Function($Val) _then;
+
+  // ignore: unused_field
+  final $Val _value;
+}
+
+/// @nodoc
+abstract class _$$CurrencyListErrorCopyWith<$Res> {
+  factory _$$CurrencyListErrorCopyWith(
+          _$CurrencyListError value, $Res Function(_$CurrencyListError) then) =
+      __$$CurrencyListErrorCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$CurrencyListErrorCopyWithImpl<$Res>
+    extends _$CurrencyListStateCopyWithImpl<$Res, _$CurrencyListError>
+    implements _$$CurrencyListErrorCopyWith<$Res> {
+  __$$CurrencyListErrorCopyWithImpl(
+      _$CurrencyListError _value, $Res Function(_$CurrencyListError) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$CurrencyListError
+    with DiagnosticableTreeMixin
+    implements CurrencyListError {
+  const _$CurrencyListError();
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$CurrencyListError);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() initial,
+    required TResult Function(List<Currency> currencies) loaded,
+    required TResult Function() loading,
+  }) {
+    return error();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? initial,
+    TResult? Function(List<Currency> currencies)? loaded,
+    TResult? Function()? loading,
+  }) {
+    return error?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? initial,
+    TResult Function(List<Currency> currencies)? loaded,
+    TResult Function()? loading,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(CurrencyListError value) error,
+    required TResult Function(CurrencyListInitial value) initial,
+    required TResult Function(CurrencyListLoaded value) loaded,
+    required TResult Function(CurrencyListLoading value) loading,
+  }) {
+    return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(CurrencyListError value)? error,
+    TResult? Function(CurrencyListInitial value)? initial,
+    TResult? Function(CurrencyListLoaded value)? loaded,
+    TResult? Function(CurrencyListLoading value)? loading,
+  }) {
+    return error?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(CurrencyListError value)? error,
+    TResult Function(CurrencyListInitial value)? initial,
+    TResult Function(CurrencyListLoaded value)? loaded,
+    TResult Function(CurrencyListLoading value)? loading,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this);
+    }
+    return orElse();
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'CurrencyListState.error'));
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'CurrencyListState.error()';
+  }
+}
+
+abstract class CurrencyListError implements CurrencyListState {
+  const factory CurrencyListError() = _$CurrencyListError;
 }
 
 /// @nodoc
@@ -269,32 +403,18 @@ class _$CurrencyListInitial
   const _$CurrencyListInitial();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'CurrencyListState.initial()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'CurrencyListState.initial'));
-  }
-
-  @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType && other is _$CurrencyListInitial);
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() error,
     required TResult Function() initial,
     required TResult Function(List<Currency> currencies) loaded,
     required TResult Function() loading,
-    required TResult Function() error,
   }) {
     return initial();
   }
@@ -302,10 +422,10 @@ class _$CurrencyListInitial
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
     TResult? Function()? initial,
     TResult? Function(List<Currency> currencies)? loaded,
     TResult? Function()? loading,
-    TResult? Function()? error,
   }) {
     return initial?.call();
   }
@@ -313,10 +433,10 @@ class _$CurrencyListInitial
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
     TResult Function()? initial,
     TResult Function(List<Currency> currencies)? loaded,
     TResult Function()? loading,
-    TResult Function()? error,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -328,10 +448,10 @@ class _$CurrencyListInitial
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(CurrencyListError value) error,
     required TResult Function(CurrencyListInitial value) initial,
     required TResult Function(CurrencyListLoaded value) loaded,
     required TResult Function(CurrencyListLoading value) loading,
-    required TResult Function(CurrencyListError value) error,
   }) {
     return initial(this);
   }
@@ -339,10 +459,10 @@ class _$CurrencyListInitial
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(CurrencyListError value)? error,
     TResult? Function(CurrencyListInitial value)? initial,
     TResult? Function(CurrencyListLoaded value)? loaded,
     TResult? Function(CurrencyListLoading value)? loading,
-    TResult? Function(CurrencyListError value)? error,
   }) {
     return initial?.call(this);
   }
@@ -350,16 +470,30 @@ class _$CurrencyListInitial
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(CurrencyListError value)? error,
     TResult Function(CurrencyListInitial value)? initial,
     TResult Function(CurrencyListLoaded value)? loaded,
     TResult Function(CurrencyListLoading value)? loading,
-    TResult Function(CurrencyListError value)? error,
     required TResult orElse(),
   }) {
     if (initial != null) {
       return initial(this);
     }
     return orElse();
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'CurrencyListState.initial'));
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'CurrencyListState.initial()';
   }
 }
 
@@ -372,6 +506,7 @@ abstract class _$$CurrencyListLoadedCopyWith<$Res> {
   factory _$$CurrencyListLoadedCopyWith(_$CurrencyListLoaded value,
           $Res Function(_$CurrencyListLoaded) then) =
       __$$CurrencyListLoadedCopyWithImpl<$Res>;
+
   @useResult
   $Res call({List<Currency> currencies});
 }
@@ -407,25 +542,6 @@ class _$CurrencyListLoaded
       : _currencies = currencies;
 
   final List<Currency> _currencies;
-  @override
-  List<Currency> get currencies {
-    if (_currencies is EqualUnmodifiableListView) return _currencies;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_currencies);
-  }
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'CurrencyListState.loaded(currencies: $currencies)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'CurrencyListState.loaded'))
-      ..add(DiagnosticsProperty('currencies', currencies));
-  }
 
   @override
   bool operator ==(dynamic other) {
@@ -435,10 +551,6 @@ class _$CurrencyListLoaded
             const DeepCollectionEquality()
                 .equals(other._currencies, _currencies));
   }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_currencies));
 
   @JsonKey(ignore: true)
   @override
@@ -450,10 +562,10 @@ class _$CurrencyListLoaded
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() error,
     required TResult Function() initial,
     required TResult Function(List<Currency> currencies) loaded,
     required TResult Function() loading,
-    required TResult Function() error,
   }) {
     return loaded(currencies);
   }
@@ -461,10 +573,10 @@ class _$CurrencyListLoaded
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
     TResult? Function()? initial,
     TResult? Function(List<Currency> currencies)? loaded,
     TResult? Function()? loading,
-    TResult? Function()? error,
   }) {
     return loaded?.call(currencies);
   }
@@ -472,10 +584,10 @@ class _$CurrencyListLoaded
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
     TResult Function()? initial,
     TResult Function(List<Currency> currencies)? loaded,
     TResult Function()? loading,
-    TResult Function()? error,
     required TResult orElse(),
   }) {
     if (loaded != null) {
@@ -487,10 +599,10 @@ class _$CurrencyListLoaded
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(CurrencyListError value) error,
     required TResult Function(CurrencyListInitial value) initial,
     required TResult Function(CurrencyListLoaded value) loaded,
     required TResult Function(CurrencyListLoading value) loading,
-    required TResult Function(CurrencyListError value) error,
   }) {
     return loaded(this);
   }
@@ -498,10 +610,10 @@ class _$CurrencyListLoaded
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(CurrencyListError value)? error,
     TResult? Function(CurrencyListInitial value)? initial,
     TResult? Function(CurrencyListLoaded value)? loaded,
     TResult? Function(CurrencyListLoading value)? loading,
-    TResult? Function(CurrencyListError value)? error,
   }) {
     return loaded?.call(this);
   }
@@ -509,16 +621,40 @@ class _$CurrencyListLoaded
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(CurrencyListError value)? error,
     TResult Function(CurrencyListInitial value)? initial,
     TResult Function(CurrencyListLoaded value)? loaded,
     TResult Function(CurrencyListLoading value)? loading,
-    TResult Function(CurrencyListError value)? error,
     required TResult orElse(),
   }) {
     if (loaded != null) {
       return loaded(this);
     }
     return orElse();
+  }
+
+  @override
+  List<Currency> get currencies {
+    if (_currencies is EqualUnmodifiableListView) return _currencies;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_currencies);
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'CurrencyListState.loaded'))
+      ..add(DiagnosticsProperty('currencies', currencies));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_currencies));
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'CurrencyListState.loaded(currencies: $currencies)';
   }
 }
 
@@ -527,6 +663,7 @@ abstract class CurrencyListLoaded implements CurrencyListState {
       _$CurrencyListLoaded;
 
   List<Currency> get currencies;
+
   @JsonKey(ignore: true)
   _$$CurrencyListLoadedCopyWith<_$CurrencyListLoaded> get copyWith =>
       throw _privateConstructorUsedError;
@@ -556,32 +693,18 @@ class _$CurrencyListLoading
   const _$CurrencyListLoading();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'CurrencyListState.loading()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'CurrencyListState.loading'));
-  }
-
-  @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType && other is _$CurrencyListLoading);
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() error,
     required TResult Function() initial,
     required TResult Function(List<Currency> currencies) loaded,
     required TResult Function() loading,
-    required TResult Function() error,
   }) {
     return loading();
   }
@@ -589,10 +712,10 @@ class _$CurrencyListLoading
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
     TResult? Function()? initial,
     TResult? Function(List<Currency> currencies)? loaded,
     TResult? Function()? loading,
-    TResult? Function()? error,
   }) {
     return loading?.call();
   }
@@ -600,10 +723,10 @@ class _$CurrencyListLoading
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
     TResult Function()? initial,
     TResult Function(List<Currency> currencies)? loaded,
     TResult Function()? loading,
-    TResult Function()? error,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -615,10 +738,10 @@ class _$CurrencyListLoading
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(CurrencyListError value) error,
     required TResult Function(CurrencyListInitial value) initial,
     required TResult Function(CurrencyListLoaded value) loaded,
     required TResult Function(CurrencyListLoading value) loading,
-    required TResult Function(CurrencyListError value) error,
   }) {
     return loading(this);
   }
@@ -626,10 +749,10 @@ class _$CurrencyListLoading
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(CurrencyListError value)? error,
     TResult? Function(CurrencyListInitial value)? initial,
     TResult? Function(CurrencyListLoaded value)? loaded,
     TResult? Function(CurrencyListLoading value)? loading,
-    TResult? Function(CurrencyListError value)? error,
   }) {
     return loading?.call(this);
   }
@@ -637,10 +760,10 @@ class _$CurrencyListLoading
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(CurrencyListError value)? error,
     TResult Function(CurrencyListInitial value)? initial,
     TResult Function(CurrencyListLoaded value)? loaded,
     TResult Function(CurrencyListLoading value)? loading,
-    TResult Function(CurrencyListError value)? error,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -648,130 +771,22 @@ class _$CurrencyListLoading
     }
     return orElse();
   }
-}
-
-abstract class CurrencyListLoading implements CurrencyListState {
-  const factory CurrencyListLoading() = _$CurrencyListLoading;
-}
-
-/// @nodoc
-abstract class _$$CurrencyListErrorCopyWith<$Res> {
-  factory _$$CurrencyListErrorCopyWith(
-          _$CurrencyListError value, $Res Function(_$CurrencyListError) then) =
-      __$$CurrencyListErrorCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$CurrencyListErrorCopyWithImpl<$Res>
-    extends _$CurrencyListStateCopyWithImpl<$Res, _$CurrencyListError>
-    implements _$$CurrencyListErrorCopyWith<$Res> {
-  __$$CurrencyListErrorCopyWithImpl(
-      _$CurrencyListError _value, $Res Function(_$CurrencyListError) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$CurrencyListError
-    with DiagnosticableTreeMixin
-    implements CurrencyListError {
-  const _$CurrencyListError();
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'CurrencyListState.error()';
-  }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'CurrencyListState.error'));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$CurrencyListError);
+    properties.add(DiagnosticsProperty('type', 'CurrencyListState.loading'));
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function(List<Currency> currencies) loaded,
-    required TResult Function() loading,
-    required TResult Function() error,
-  }) {
-    return error();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function(List<Currency> currencies)? loaded,
-    TResult? Function()? loading,
-    TResult? Function()? error,
-  }) {
-    return error?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(List<Currency> currencies)? loaded,
-    TResult Function()? loading,
-    TResult Function()? error,
-    required TResult orElse(),
-  }) {
-    if (error != null) {
-      return error();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(CurrencyListInitial value) initial,
-    required TResult Function(CurrencyListLoaded value) loaded,
-    required TResult Function(CurrencyListLoading value) loading,
-    required TResult Function(CurrencyListError value) error,
-  }) {
-    return error(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(CurrencyListInitial value)? initial,
-    TResult? Function(CurrencyListLoaded value)? loaded,
-    TResult? Function(CurrencyListLoading value)? loading,
-    TResult? Function(CurrencyListError value)? error,
-  }) {
-    return error?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(CurrencyListInitial value)? initial,
-    TResult Function(CurrencyListLoaded value)? loaded,
-    TResult Function(CurrencyListLoading value)? loading,
-    TResult Function(CurrencyListError value)? error,
-    required TResult orElse(),
-  }) {
-    if (error != null) {
-      return error(this);
-    }
-    return orElse();
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'CurrencyListState.loading()';
   }
 }
 
-abstract class CurrencyListError implements CurrencyListState {
-  const factory CurrencyListError() = _$CurrencyListError;
+abstract class CurrencyListLoading implements CurrencyListState {
+  const factory CurrencyListLoading() = _$CurrencyListLoading;
 }

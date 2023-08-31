@@ -2,6 +2,8 @@ part of 'currency_list_bloc.dart';
 
 @freezed
 class CurrencyListState with _$CurrencyListState {
+  const factory CurrencyListState.error() = CurrencyListError;
+
   const factory CurrencyListState.initial() = CurrencyListInitial;
 
   const factory CurrencyListState.loaded(
@@ -9,6 +11,4 @@ class CurrencyListState with _$CurrencyListState {
   ) = CurrencyListLoaded;
 
   const factory CurrencyListState.loading() = CurrencyListLoading;
-
-  const factory CurrencyListState.error() = CurrencyListError;
 }

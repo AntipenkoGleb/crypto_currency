@@ -1,4 +1,4 @@
-import 'package:crypto_currency/data/models/currencies/currencies_response_model.dart';
+import '../models/currencies/currencies_response_model.dart';
 import 'package:dio/dio.dart';
 
 abstract class CoinCapRemoteDataSource {
