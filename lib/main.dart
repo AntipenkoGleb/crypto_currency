@@ -1,3 +1,4 @@
+import 'package:crypto_currency/app/localization.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -13,11 +14,9 @@ Future<void> main() async {
 
   runApp(
     EasyLocalization(
-      supportedLocales: const [
-        Locale.fromSubtags(languageCode: 'en'),
-        Locale.fromSubtags(languageCode: 'ru'),
-      ],
-      path: 'assets/translations',
+      supportedLocales: supportedLocales,
+      fallbackLocale: fallbackLocale,
+      path: pathToLocalizationAssets,
       child: const App(),
     ),
   );

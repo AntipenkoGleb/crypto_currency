@@ -21,7 +21,7 @@ class CurrencyRepositoryImpl extends CurrencyRepository {
       id: model.id ?? 'none',
       rank: int.parse(model.rank!),
       symbol: model.symbol ?? '',
-      name: model.supply ?? '',
+      name: model.name ?? '',
       supply: double.tryParse(model.supply ?? ''),
       maxSupply: double.tryParse(model.maxSupply ?? ''),
       marketCapUsd: double.tryParse(model.marketCapUsd ?? ''),
