@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:injectable/injectable.dart';
 
-import '../../../app/injection.dart';
 import '../../../domain/entities/currency.dart';
 import '../../../domain/use_cases/get_currencies_use_case.dart';
 
@@ -10,12 +10,13 @@ part 'currency_list_bloc.freezed.dart';
 part 'currency_list_event.dart';
 part 'currency_list_state.dart';
 
+@injectable
 class CurrencyListBloc extends Bloc<CurrencyListEvent, CurrencyListState> {
-  CurrencyListBloc() : super(const CurrencyListState.initial()) {
+  CurrencyListBloc(this.useCase) : super(const CurrencyListState.initial()) {
     on<CurrencyListStartedEvent>(getCurrencies);
   }
 
-  final useCase = sl<GetCurrenciesUseCase>();
+  final GetCurrenciesUseCase useCase;
 
   Future<void> getCurrencies(event, emit) async {
     emit(const CurrencyListState.loading());

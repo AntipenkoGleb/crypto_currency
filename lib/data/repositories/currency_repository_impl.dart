@@ -1,12 +1,14 @@
-import '../../app/injection.dart';
+import 'package:injectable/injectable.dart';
 
+import '../../app/injection.dart';
 import '../../domain/entities/currency.dart';
-import '../data_sources/coin_cap_remote_data_source.dart';
 import '../../domain/repositories/currency_repository.dart';
+import '../data_sources/coin_cap_remote_data_source.dart';
 import '../models/currency/currency_model.dart';
 
+@LazySingleton(as: CurrencyRepository)
 class CurrencyRepositoryImpl extends CurrencyRepository {
-  final CoinCapRemoteDataSource dataSource = sl<CoinCapRemoteDataSource>();
+  final CoinCapRemoteDataSource dataSource = getIt<CoinCapRemoteDataSource>();
 
   @override
   Future<List<Currency>> getCurrencies() async {

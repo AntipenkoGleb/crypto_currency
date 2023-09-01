@@ -1,4 +1,4 @@
-import 'package:crypto_currency/app/localization.dart';
+import 'app/localization.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +10,7 @@ Future<void> main() async {
 
   await EasyLocalization.ensureInitialized();
 
-  initServiceLocator();
+  configureDependencies();
 
   runApp(
     EasyLocalization(

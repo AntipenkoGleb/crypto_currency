@@ -1,9 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:easy_localization/easy_localization.dart';
 
+import '../../app/injection.dart';
 import '../bloc/currency_list/currency_list_bloc.dart';
 
 @RoutePage()
@@ -15,7 +16,7 @@ class CurrencyListPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('title').tr()),
       body: BlocBuilder<CurrencyListBloc, CurrencyListState>(
-        bloc: CurrencyListBloc()..add(const CurrencyListEvent.started()),
+        bloc: getIt<CurrencyListBloc>()..add(const CurrencyListEvent.started()),
         builder: (context, state) {
           return state.when(
             initial: () {
