@@ -9,6 +9,7 @@ class Currency with _$Currency {
     required int rank,
     required String symbol,
     required String name,
+    required String imageUrl,
     double? supply,
     double? maxSupply,
     double? marketCapUsd,
@@ -17,6 +18,6 @@ class Currency with _$Currency {
     double? changePercent24Hr,
     double? vwap24Hr,
     required String explorer,
-    required int timestamp,
+    required DateTime date,
   }) = _Currency;
 }

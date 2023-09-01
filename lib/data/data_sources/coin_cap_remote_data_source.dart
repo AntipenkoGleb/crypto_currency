@@ -1,4 +1,4 @@
-import 'package:dio/dio.dart';
+import 'api_client.dart';
 import 'package:injectable/injectable.dart';
 
 import '../models/currencies/currencies_response_model.dart';
@@ -9,20 +9,13 @@ abstract class CoinCapRemoteDataSource {
 
 @LazySingleton(as: CoinCapRemoteDataSource)
 class CoinCapRemoteDataSourceImpl extends CoinCapRemoteDataSource {
-  final dio = Dio(
-    BaseOptions(
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      sendTimeout: const Duration(seconds: 3),
-    ),
-  );
+  CoinCapRemoteDataSourceImpl(this.client);
+
+  final DioApiClient client;
 
   @override
   Future<CurrenciesResponseModel> getCurrencies() async {
-    final response = await dio.get('https://api.coincap.io/v2/assets');
-
-    final currencies = CurrenciesResponseModel.fromJson(response.data);
-    return currencies;
+    final response = await client.get('/assets');
+    return CurrenciesResponseModel.fromJson(response.data);
   }
 }

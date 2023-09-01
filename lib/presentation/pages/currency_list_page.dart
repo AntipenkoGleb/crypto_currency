@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:easy_localization/easy_localization.dart';
 
-import '../../app/injection.dart';
+import '../../app/di/injection.dart';
 import '../bloc/currency_list/currency_list_bloc.dart';
 
 @RoutePage()
@@ -32,8 +32,7 @@ class CurrencyListPage extends StatelessWidget {
                   final currency = currencies[index];
                   return ListTile(
                     leading: CachedNetworkImage(
-                      imageUrl:
-                          'https://assets.coincap.io/assets/icons/${currency.symbol.toLowerCase()}@2x.png',
+                      imageUrl: currency.imageUrl,
                       height: 36,
                       width: 36,
                       cacheKey: currency.symbol,
@@ -44,8 +43,7 @@ class CurrencyListPage extends StatelessWidget {
                     ),
                     title: Text('${currency.name} (${currency.symbol})'),
                     subtitle: Text(DateFormat.jms(context.locale.toString())
-                        .format(DateTime.fromMillisecondsSinceEpoch(
-                            currency.timestamp))),
+                        .format(currency.date)),
                     onTap: () {},
                     trailing: const Text(
                       'price',

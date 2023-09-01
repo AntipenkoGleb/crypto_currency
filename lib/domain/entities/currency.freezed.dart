@@ -20,6 +20,7 @@ mixin _$Currency {
   int get rank => throw _privateConstructorUsedError;
   String get symbol => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
+  String get imageUrl => throw _privateConstructorUsedError;
   double? get supply => throw _privateConstructorUsedError;
   double? get maxSupply => throw _privateConstructorUsedError;
   double? get marketCapUsd => throw _privateConstructorUsedError;
@@ -28,7 +29,7 @@ mixin _$Currency {
   double? get changePercent24Hr => throw _privateConstructorUsedError;
   double? get vwap24Hr => throw _privateConstructorUsedError;
   String get explorer => throw _privateConstructorUsedError;
-  int get timestamp => throw _privateConstructorUsedError;
+  DateTime get date => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $CurrencyCopyWith<Currency> get copyWith =>
@@ -45,6 +46,7 @@ abstract class $CurrencyCopyWith<$Res> {
       int rank,
       String symbol,
       String name,
+      String imageUrl,
       double? supply,
       double? maxSupply,
       double? marketCapUsd,
@@ -53,7 +55,7 @@ abstract class $CurrencyCopyWith<$Res> {
       double? changePercent24Hr,
       double? vwap24Hr,
       String explorer,
-      int timestamp});
+      DateTime date});
 }
 
 /// @nodoc
@@ -73,6 +75,7 @@ class _$CurrencyCopyWithImpl<$Res, $Val extends Currency>
     Object? rank = null,
     Object? symbol = null,
     Object? name = null,
+    Object? imageUrl = null,
     Object? supply = freezed,
     Object? maxSupply = freezed,
     Object? marketCapUsd = freezed,
@@ -81,7 +84,7 @@ class _$CurrencyCopyWithImpl<$Res, $Val extends Currency>
     Object? changePercent24Hr = freezed,
     Object? vwap24Hr = freezed,
     Object? explorer = null,
-    Object? timestamp = null,
+    Object? date = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -100,6 +103,10 @@ class _$CurrencyCopyWithImpl<$Res, $Val extends Currency>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
+      imageUrl: null == imageUrl
+          ? _value.imageUrl
+          : imageUrl // ignore: cast_nullable_to_non_nullable
+              as String,
       supply: freezed == supply
           ? _value.supply
           : supply // ignore: cast_nullable_to_non_nullable
@@ -132,10 +139,10 @@ class _$CurrencyCopyWithImpl<$Res, $Val extends Currency>
           ? _value.explorer
           : explorer // ignore: cast_nullable_to_non_nullable
               as String,
-      timestamp: null == timestamp
-          ? _value.timestamp
-          : timestamp // ignore: cast_nullable_to_non_nullable
-              as int,
+      date: null == date
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ) as $Val);
   }
 }
@@ -152,6 +159,7 @@ abstract class _$$_CurrencyCopyWith<$Res> implements $CurrencyCopyWith<$Res> {
       int rank,
       String symbol,
       String name,
+      String imageUrl,
       double? supply,
       double? maxSupply,
       double? marketCapUsd,
@@ -160,7 +168,7 @@ abstract class _$$_CurrencyCopyWith<$Res> implements $CurrencyCopyWith<$Res> {
       double? changePercent24Hr,
       double? vwap24Hr,
       String explorer,
-      int timestamp});
+      DateTime date});
 }
 
 /// @nodoc
@@ -178,6 +186,7 @@ class __$$_CurrencyCopyWithImpl<$Res>
     Object? rank = null,
     Object? symbol = null,
     Object? name = null,
+    Object? imageUrl = null,
     Object? supply = freezed,
     Object? maxSupply = freezed,
     Object? marketCapUsd = freezed,
@@ -186,7 +195,7 @@ class __$$_CurrencyCopyWithImpl<$Res>
     Object? changePercent24Hr = freezed,
     Object? vwap24Hr = freezed,
     Object? explorer = null,
-    Object? timestamp = null,
+    Object? date = null,
   }) {
     return _then(_$_Currency(
       id: null == id
@@ -205,6 +214,10 @@ class __$$_CurrencyCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
+      imageUrl: null == imageUrl
+          ? _value.imageUrl
+          : imageUrl // ignore: cast_nullable_to_non_nullable
+              as String,
       supply: freezed == supply
           ? _value.supply
           : supply // ignore: cast_nullable_to_non_nullable
@@ -237,10 +250,10 @@ class __$$_CurrencyCopyWithImpl<$Res>
           ? _value.explorer
           : explorer // ignore: cast_nullable_to_non_nullable
               as String,
-      timestamp: null == timestamp
-          ? _value.timestamp
-          : timestamp // ignore: cast_nullable_to_non_nullable
-              as int,
+      date: null == date
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -253,6 +266,7 @@ class _$_Currency implements _Currency {
       required this.rank,
       required this.symbol,
       required this.name,
+      required this.imageUrl,
       this.supply,
       this.maxSupply,
       this.marketCapUsd,
@@ -261,7 +275,7 @@ class _$_Currency implements _Currency {
       this.changePercent24Hr,
       this.vwap24Hr,
       required this.explorer,
-      required this.timestamp});
+      required this.date});
 
   @override
   final String id;
@@ -271,6 +285,8 @@ class _$_Currency implements _Currency {
   final String symbol;
   @override
   final String name;
+  @override
+  final String imageUrl;
   @override
   final double? supply;
   @override
@@ -288,11 +304,11 @@ class _$_Currency implements _Currency {
   @override
   final String explorer;
   @override
-  final int timestamp;
+  final DateTime date;
 
   @override
   String toString() {
-    return 'Currency(id: $id, rank: $rank, symbol: $symbol, name: $name, supply: $supply, maxSupply: $maxSupply, marketCapUsd: $marketCapUsd, volumeUsd24Hr: $volumeUsd24Hr, priceUsd: $priceUsd, changePercent24Hr: $changePercent24Hr, vwap24Hr: $vwap24Hr, explorer: $explorer, timestamp: $timestamp)';
+    return 'Currency(id: $id, rank: $rank, symbol: $symbol, name: $name, imageUrl: $imageUrl, supply: $supply, maxSupply: $maxSupply, marketCapUsd: $marketCapUsd, volumeUsd24Hr: $volumeUsd24Hr, priceUsd: $priceUsd, changePercent24Hr: $changePercent24Hr, vwap24Hr: $vwap24Hr, explorer: $explorer, date: $date)';
   }
 
   @override
@@ -304,6 +320,8 @@ class _$_Currency implements _Currency {
             (identical(other.rank, rank) || other.rank == rank) &&
             (identical(other.symbol, symbol) || other.symbol == symbol) &&
             (identical(other.name, name) || other.name == name) &&
+            (identical(other.imageUrl, imageUrl) ||
+                other.imageUrl == imageUrl) &&
             (identical(other.supply, supply) || other.supply == supply) &&
             (identical(other.maxSupply, maxSupply) ||
                 other.maxSupply == maxSupply) &&
@@ -319,8 +337,7 @@ class _$_Currency implements _Currency {
                 other.vwap24Hr == vwap24Hr) &&
             (identical(other.explorer, explorer) ||
                 other.explorer == explorer) &&
-            (identical(other.timestamp, timestamp) ||
-                other.timestamp == timestamp));
+            (identical(other.date, date) || other.date == date));
   }
 
   @override
@@ -330,6 +347,7 @@ class _$_Currency implements _Currency {
       rank,
       symbol,
       name,
+      imageUrl,
       supply,
       maxSupply,
       marketCapUsd,
@@ -338,7 +356,7 @@ class _$_Currency implements _Currency {
       changePercent24Hr,
       vwap24Hr,
       explorer,
-      timestamp);
+      date);
 
   @JsonKey(ignore: true)
   @override
@@ -353,6 +371,7 @@ abstract class _Currency implements Currency {
       required final int rank,
       required final String symbol,
       required final String name,
+      required final String imageUrl,
       final double? supply,
       final double? maxSupply,
       final double? marketCapUsd,
@@ -361,7 +380,7 @@ abstract class _Currency implements Currency {
       final double? changePercent24Hr,
       final double? vwap24Hr,
       required final String explorer,
-      required final int timestamp}) = _$_Currency;
+      required final DateTime date}) = _$_Currency;
 
   @override
   String get id;
@@ -371,6 +390,8 @@ abstract class _Currency implements Currency {
   String get symbol;
   @override
   String get name;
+  @override
+  String get imageUrl;
   @override
   double? get supply;
   @override
@@ -388,7 +409,7 @@ abstract class _Currency implements Currency {
   @override
   String get explorer;
   @override
-  int get timestamp;
+  DateTime get date;
   @override
   @JsonKey(ignore: true)
   _$$_CurrencyCopyWith<_$_Currency> get copyWith =>

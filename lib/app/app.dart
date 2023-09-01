@@ -1,7 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-import 'router.dart';
+import 'routing/router.dart';
+import 'theming/themes.dart';
 
 final _router = AppRouter();
 
@@ -15,10 +16,8 @@ class App extends StatelessWidget {
       onGenerateTitle: (context) => 'title'.tr(),
       supportedLocales: context.supportedLocales,
       localizationsDelegates: context.localizationDelegates,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: lightTheme,
+      darkTheme: darkTheme,
       routerConfig: _router.config(),
     );
   }
